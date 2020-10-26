@@ -131,7 +131,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Failamp"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MP3Player"))
         self.currentTimeIcon.setText(_translate("MainWindow", "0:00"))
         self.totalTimeIcon.setText(_translate("MainWindow", "0:00"))
         self.menuFIle.setTitle(_translate("MainWindow", "FIle"))
