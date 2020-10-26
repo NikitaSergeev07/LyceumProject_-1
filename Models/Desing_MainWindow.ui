@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #22222e;
+</string>
+   </property>
+   <widget class="QFrame" name="Header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #fb5b5d;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="Tittle_MainWindow">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>451</width>
+       <height>58</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Humnst777 BlkCn BT</family>
+       <pointsize>36</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+</string>
+     </property>
+     <property name="text">
+      <string>The Future Programm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Image_MainWindow">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>90</y>
+       <width>621</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/MusicalNote.jpg</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_MP3Player">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>380</y>
+      <width>171</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Humnst777 BlkCn BT</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #fb5b5d;
+	border-radius: 8px;	
+	border: 2px solid #960631;
+	color: white
+}
+
+QPushButton:pressed{
+	background-color: #fa4244
+}
+
+
+
+ 
+</string>
+    </property>
+    <property name="text">
+     <string>MP3Player</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_PhotoProcessing">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>380</y>
+      <width>171</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Humnst777 BlkCn BT</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #fb5b5d;
+	border-radius: 8px;	
+	border: 2px solid #960631;
+	color: white
+}
+
+QPushButton:pressed{
+	background-color: #fa4244
+}
+
+
+
+ 
+</string>
+    </property>
+    <property name="text">
+     <string>PhotoProcessing</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_AudioAndVideoProcessing">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>380</y>
+      <width>241</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Humnst777 BlkCn BT</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #fb5b5d;
+	border-radius: 8px;	
+	border: 2px solid #960631;
+	color: white
+}
+
+QPushButton:pressed{
+	background-color: #fa4244
+}
+
+
+
+ 
+</string>
+    </property>
+    <property name="text">
+     <string>AudioAndVideoProcessing</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
