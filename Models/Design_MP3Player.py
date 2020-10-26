@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(484, 371)
-        self.centralWidget = QtWidgets.QWidget(MainWindow)
+class Ui_MP3PlayerWindow(object):
+    def setupUi(self, MP3PlayerWindow):
+        MP3PlayerWindow.setObjectName("MP3PlayerWindow")
+        MP3PlayerWindow.resize(484, 371)
+        self.centralWidget = QtWidgets.QWidget(MP3PlayerWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -111,28 +111,28 @@ class Ui_MainWindow(object):
         self.volumeSlider.setObjectName("volumeSlider")
         self.horizontalLayout_5.addWidget(self.volumeSlider)
         self.verticalLayout.addLayout(self.horizontalLayout_5)
-        MainWindow.setCentralWidget(self.centralWidget)
-        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        MP3PlayerWindow.setCentralWidget(self.centralWidget)
+        self.statusBar = QtWidgets.QStatusBar(MP3PlayerWindow)
         self.statusBar.setObjectName("statusBar")
-        MainWindow.setStatusBar(self.statusBar)
-        self.menuBar = QtWidgets.QMenuBar(MainWindow)
+        MP3PlayerWindow.setStatusBar(self.statusBar)
+        self.menuBar = QtWidgets.QMenuBar(MP3PlayerWindow)
         self.menuBar.setGeometry(QtCore.QRect(0, 0, 484, 21))
         self.menuBar.setObjectName("menuBar")
         self.menuFIle = QtWidgets.QMenu(self.menuBar)
         self.menuFIle.setObjectName("menuFIle")
-        MainWindow.setMenuBar(self.menuBar)
-        self.open_file_action = QtWidgets.QAction(MainWindow)
+        MP3PlayerWindow.setMenuBar(self.menuBar)
+        self.open_file_action = QtWidgets.QAction(MP3PlayerWindow)
         self.open_file_action.setObjectName("open_file_action")
         self.menuFIle.addAction(self.open_file_action)
         self.menuBar.addAction(self.menuFIle.menuAction())
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MP3PlayerWindow)
+        QtCore.QMetaObject.connectSlotsByName(MP3PlayerWindow)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MP3PlayerWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MP3Player"))
-        self.currentTimeIcon.setText(_translate("MainWindow", "0:00"))
-        self.totalTimeIcon.setText(_translate("MainWindow", "0:00"))
-        self.menuFIle.setTitle(_translate("MainWindow", "FIle"))
-        self.open_file_action.setText(_translate("MainWindow", "Open file..."))
+        MP3PlayerWindow.setWindowTitle(_translate("MP3PlayerWindow", "MP3Player"))
+        self.currentTimeIcon.setText(_translate("MP3PlayerWindow", "0:00"))
+        self.totalTimeIcon.setText(_translate("MP3PlayerWindow", "0:00"))
+        self.menuFIle.setTitle(_translate("MP3PlayerWindow", "FIle"))
+        self.open_file_action.setText(_translate("MP3PlayerWindow", "Open file..."))
