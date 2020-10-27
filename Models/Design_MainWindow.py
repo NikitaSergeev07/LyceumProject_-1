@@ -10,19 +10,18 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(801, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("background-color: #22222e;\n"
-"")
+                                         "")
         self.centralwidget.setObjectName("centralwidget")
         self.Header = QtWidgets.QFrame(self.centralwidget)
         self.Header.setGeometry(QtCore.QRect(0, 0, 801, 301))
         self.Header.setStyleSheet("background-color: #fb5b5d;\n"
-"")
+                                  "")
         self.Header.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.Header.setFrameShadow(QtWidgets.QFrame.Raised)
         self.Header.setObjectName("Header")
@@ -35,7 +34,7 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.Tittle_MainWindow.setFont(font)
         self.Tittle_MainWindow.setStyleSheet("color: white;\n"
-"")
+                                             "")
         self.Tittle_MainWindow.setObjectName("Tittle_MainWindow")
         self.Image_MainWindow = QtWidgets.QLabel(self.Header)
         self.Image_MainWindow.setGeometry(QtCore.QRect(100, 90, 621, 201))
@@ -51,20 +50,20 @@ class Ui_MainWindow(object):
         self.btn_MP3Player.setFont(font)
         self.btn_MP3Player.setFocusPolicy(QtCore.Qt.NoFocus)
         self.btn_MP3Player.setStyleSheet("QPushButton {\n"
-"    background-color: #fb5b5d;\n"
-"    border-radius: 8px;    \n"
-"    border: 2px solid #960631;\n"
-"    color: white\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background-color: #fa4244\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-" \n"
-"")
+                                         "    background-color: #fb5b5d;\n"
+                                         "    border-radius: 8px;    \n"
+                                         "    border: 2px solid #960631;\n"
+                                         "    color: white\n"
+                                         "}\n"
+                                         "\n"
+                                         "QPushButton:pressed{\n"
+                                         "    background-color: #fa4244\n"
+                                         "}\n"
+                                         "\n"
+                                         "\n"
+                                         "\n"
+                                         " \n"
+                                         "")
         self.btn_MP3Player.setObjectName("btn_MP3Player")
         self.btn_PhotoProcessing = QtWidgets.QPushButton(self.centralwidget)
         self.btn_PhotoProcessing.setGeometry(QtCore.QRect(310, 380, 171, 81))
@@ -75,20 +74,20 @@ class Ui_MainWindow(object):
         self.btn_PhotoProcessing.setFont(font)
         self.btn_PhotoProcessing.setFocusPolicy(QtCore.Qt.NoFocus)
         self.btn_PhotoProcessing.setStyleSheet("QPushButton {\n"
-"    background-color: #fb5b5d;\n"
-"    border-radius: 8px;    \n"
-"    border: 2px solid #960631;\n"
-"    color: white\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background-color: #fa4244\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-" \n"
-"")
+                                               "    background-color: #fb5b5d;\n"
+                                               "    border-radius: 8px;    \n"
+                                               "    border: 2px solid #960631;\n"
+                                               "    color: white\n"
+                                               "}\n"
+                                               "\n"
+                                               "QPushButton:pressed{\n"
+                                               "    background-color: #fa4244\n"
+                                               "}\n"
+                                               "\n"
+                                               "\n"
+                                               "\n"
+                                               " \n"
+                                               "")
         self.btn_PhotoProcessing.setObjectName("btn_PhotoProcessing")
         self.btn_AudioAndVideoProcessing = QtWidgets.QPushButton(self.centralwidget)
         self.btn_AudioAndVideoProcessing.setGeometry(QtCore.QRect(530, 380, 241, 81))
@@ -99,20 +98,20 @@ class Ui_MainWindow(object):
         self.btn_AudioAndVideoProcessing.setFont(font)
         self.btn_AudioAndVideoProcessing.setFocusPolicy(QtCore.Qt.NoFocus)
         self.btn_AudioAndVideoProcessing.setStyleSheet("QPushButton {\n"
-"    background-color: #fb5b5d;\n"
-"    border-radius: 8px;    \n"
-"    border: 2px solid #960631;\n"
-"    color: white\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"    background-color: #fa4244\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-" \n"
-"")
+                                                       "    background-color: #fb5b5d;\n"
+                                                       "    border-radius: 8px;    \n"
+                                                       "    border: 2px solid #960631;\n"
+                                                       "    color: white\n"
+                                                       "}\n"
+                                                       "\n"
+                                                       "QPushButton:pressed{\n"
+                                                       "    background-color: #fa4244\n"
+                                                       "}\n"
+                                                       "\n"
+                                                       "\n"
+                                                       "\n"
+                                                       " \n"
+                                                       "")
         self.btn_AudioAndVideoProcessing.setObjectName("btn_AudioAndVideoProcessing")
         MainWindow.setCentralWidget(self.centralwidget)
 
