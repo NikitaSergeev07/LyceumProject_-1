@@ -8,7 +8,7 @@ from PyQt5.QtMultimediaWidgets import *
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Импортируем наш дизайн
 
 
-def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Метод для преобразования времени в миллисекундах
+def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Метод для преобразования времени в миллисекунды
     """"Используем divmod, который возвращает пару частное-остаток от деления аргументов для получения секунд"""
     # seconds = 1000
     # minutes = 60000
