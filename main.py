@@ -5,6 +5,7 @@ from Models.Design_MainWindow import Ui_MainWindow  # Это наш конвер
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Это наш конвертированный файл дизайна MP3Player
 
 
+
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
     """"Создаем конструктор класса Window_of_Main"""
 

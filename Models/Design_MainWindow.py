@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.Image_MainWindow = QtWidgets.QLabel(self.Header)
         self.Image_MainWindow.setGeometry(QtCore.QRect(100, 90, 621, 201))
         self.Image_MainWindow.setText("")
-        self.Image_MainWindow.setPixmap(QtGui.QPixmap("../images/MusicalNote.jpg"))
+        self.Image_MainWindow.setPixmap(QtGui.QPixmap("images/MusicalNote.jpg"))
         self.Image_MainWindow.setObjectName("Image_MainWindow")
         self.btn_MP3Player = QtWidgets.QPushButton(self.centralwidget)
         self.btn_MP3Player.setGeometry(QtCore.QRect(90, 380, 171, 81))
