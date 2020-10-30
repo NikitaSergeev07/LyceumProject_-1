@@ -1,9 +1,9 @@
 import sys  # sys нужен для передачи argv в QApplication
-from PyQt5 import QtCore, QtGui, QtWidgets  # Импортируем все необходимое для работы с PyQt5
+from PyQt5 import QtWidgets  # Импортируем все необходимое для работы с PyQt5
 from PyQt5.QtWidgets import QMainWindow  # Импортируем все необходимое для работы с PyQt5
 from Models.Design_MainWindow import Ui_MainWindow  # Это наш конвертированный файл дизайна MainWindow
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Это наш конвертированный файл дизайна MP3Player
-
+from Presenters.Func_For_MP3Player import MP3_MainWindow
 
 
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
@@ -19,8 +19,8 @@ class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
     """"Создаем метод для открытия MP3Player"""
 
     def openMP3Player(self):
-        self.MP3Player = Window_of_MP3Player()
-        self.MP3Player.show()
+        self.MP3Player = MP3_MainWindow()  # Создаем экземпляр нашего класса с MP3Player
+        self.MP3Player.show()  # Выводим пользователю приложение на экран
 
 
 class Window_of_MP3Player(QMainWindow, Ui_MP3PlayerWindow):  # MP3Player
@@ -35,8 +35,8 @@ class Window_of_MP3Player(QMainWindow, Ui_MP3PlayerWindow):  # MP3Player
 
 def main():
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    window = Window_of_Main()  # Создаём объект класса ExampleApp
-    window.show()  # Показываем окно
+    mainMenu_window = Window_of_Main()  # Создаём объект класса ExampleApp
+    mainMenu_window.show()  # Показываем окно
     app.exec_()  # и запускаем приложение
 
 
