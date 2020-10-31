@@ -3,12 +3,13 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtMultimedia import *
 from PyQt5.QtMultimediaWidgets import *
+import os
 # Импортировали все модули из PyQt5
 
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Импортируем наш дизайн
 
 
-def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Метод для преобразования времени в миллисекунды
+def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция для преобразования времени в миллисекунды
     """"Используем divmod, который возвращает частное и остаток от деления аргументов для получения миллисекунд"""
     # Комментарии, для понимания сколько в секундах, минутах и часах содержится миллисекунд
     # seconds = 1000
@@ -19,6 +20,13 @@ def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Метод для
     hours, minutes = divmod(minutes, 60)
     # Возвращаем количество времени с начала воспроизведения композиции
     return ("%d:%02d:%02d" % (hours, minutes, seconds)) if hours else ("%d:%02d" % (minutes, seconds))
+
+""""Создаем функцию для проверки расширения файла"""
+
+def check_ext(path):
+    _, ext = os.path.splitext(path)
+    if ext not in (".mp3", ".mp4", ".mov"): # Проверяем расширения mp3, mp4, mov
+        raise ValueError("")
 
 
 class ViewerWindow(QMainWindow):  # Создаем класс для просмотра видео
@@ -166,13 +174,12 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def open_file(self):
         path, h = QFileDialog.getOpenFileName(self, "Open file", "",  # Определяем форматы, который поддерживает плеер
                                               "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
-
-        if path:
+        try:
+            check_ext(path)
             self.playlist.addMedia(
-                QMediaContent(
-                    QUrl.fromLocalFile(path)
-                )
-            )
+                QMediaContent(QUrl.fromLocalFile(path)))
+        except ValueError as e:
+            print("Неверное расширение файла", e)
 
         self.model.layoutChanged.emit()
 
