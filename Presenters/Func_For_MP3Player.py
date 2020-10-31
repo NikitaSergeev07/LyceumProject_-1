@@ -21,11 +21,13 @@ def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция д
     # Возвращаем количество времени с начала воспроизведения композиции
     return ("%d:%02d:%02d" % (hours, minutes, seconds)) if hours else ("%d:%02d" % (minutes, seconds))
 
+
 """"Создаем функцию для проверки расширения файла"""
+
 
 def check_ext(path):
     _, ext = os.path.splitext(path)
-    if ext not in (".mp3", ".mp4", ".mov"): # Проверяем расширения mp3, mp4, mov
+    if ext not in (".mp3", ".mp4", ".mov"):  # Проверяем расширения mp3, mp4, mov
         raise ValueError("")
 
 
@@ -174,12 +176,13 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def open_file(self):
         path, h = QFileDialog.getOpenFileName(self, "Open file", "",  # Определяем форматы, который поддерживает плеер
                                               "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
-        try:
+        try:  # Проверяем расширение файла
             check_ext(path)
             self.playlist.addMedia(
                 QMediaContent(QUrl.fromLocalFile(path)))
-        except ValueError as e:
-            print("Неверное расширение файла", e)
+        except ValueError:
+            self.log = Log()  # Если расширение не соотвествует стандарту нашей программы
+            self.log.show()  # Выводим окно с поясняющим текстом
 
         self.model.layoutChanged.emit()
 
@@ -239,13 +242,34 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
         print(args)
 
 
+""""Создаем класс для диалогового окна, для неверного расширение файла"""
+
+
+class Log(QDialog):
+    # Это здесь нужно для доступа к переменным, методам
+    # и т.д. в файле Func_For_MP3Player.py
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+    def initUI(self):
+        self.setGeometry(550, 300, 220, 50)  # Размеры окна и положение окна
+        self.setWindowTitle('Extention Error')  # Заголовок окна
+
+        """"Создаем label logtext, который выводит юзеру, что он выбрал не то расширение"""
+
+        self.logtext = QLabel(self)
+        self.logtext.move(10, 10)
+        self.logtext.setText("Выбрано неверное расширение файла")
+        self.logtext.setEnabled(False)
+
+
 if __name__ == '__main__':
     app = QApplication([])
     app.setApplicationName("MP4Player")
-    app.setStyle("Oxygen")
+    app.setStyle("Fusion")
 
     # Набросали пару стилей для дизайна приложения
-
     palette = QPalette()
     palette.setColor(QPalette.Window, QColor(53, 53, 53))
     palette.setColor(QPalette.WindowText, Qt.white)
