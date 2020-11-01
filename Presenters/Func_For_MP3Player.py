@@ -28,7 +28,7 @@ def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция д
 def check_ext(path):
     _, ext = os.path.splitext(path)
     if ext not in (".mp3", ".mp4", ".mov"):  # Проверяем расширения mp3, mp4, mov
-        raise ValueError("")
+        raise ValueError()
 
 
 class ViewerWindow(QMainWindow):  # Создаем класс для просмотра видео
@@ -179,7 +179,9 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
         try:  # Проверяем расширение файла
             check_ext(path)
             self.playlist.addMedia(
-                QMediaContent(QUrl.fromLocalFile(path)))
+                QMediaContent(QUrl.fromLocalFile(path)
+                              )
+            )
         except ValueError:
             self.log = Log()  # Если расширение не соотвествует стандарту нашей программы
             self.log.show()  # Выводим окно с поясняющим текстом
@@ -262,6 +264,13 @@ class Log(QDialog):
         self.logtext.move(10, 10)
         self.logtext.setText("Выбрано неверное расширение файла")
         self.logtext.setEnabled(False)
+
+
+""""Создаем класс для просмотра базы данных и выбора композиции"""
+
+
+class dataBase_Window(QMainWindow):
+    pass
 
 
 if __name__ == '__main__':

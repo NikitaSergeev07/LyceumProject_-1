@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets  # Импортируем все необходим�
 from PyQt5.QtWidgets import QMainWindow  # Импортируем все необходимое для работы с PyQt5
 from Models.Design_MainWindow import Ui_MainWindow  # Это наш конвертированный файл дизайна MainWindow
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Это наш конвертированный файл дизайна MP3Player
-from Presenters.Func_For_MP3Player import MP3_MainWindow
+from Presenters.Func_For_MP3Player import MP3_MainWindow  # Импортируем функции нашего MP3Player
 
 
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
@@ -42,3 +42,7 @@ def main():
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     main()  # то запускаем функцию main()
+
+
+
+

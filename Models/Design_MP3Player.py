@@ -98,6 +98,13 @@ class Ui_MP3PlayerWindow(object):
         self.viewButton.setCheckable(True)
         self.viewButton.setObjectName("viewButton")
         self.horizontalLayout_5.addWidget(self.viewButton)
+        self.dbButton = QtWidgets.QPushButton(self.centralWidget)
+        self.dbButton.setText("")
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("images/db.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.dbButton.setIcon(icon6)
+        self.dbButton.setObjectName("dbButton")
+        self.horizontalLayout_5.addWidget(self.dbButton)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem)
         self.label = QtWidgets.QLabel(self.centralWidget)
@@ -138,4 +145,3 @@ class Ui_MP3PlayerWindow(object):
         self.totalTimeLabel.setText(_translate("MainWindow", "0:00"))
         self.menuFIle.setTitle(_translate("MainWindow", "FIle"))
         self.open_file_action.setText(_translate("MainWindow", "Open file..."))
-

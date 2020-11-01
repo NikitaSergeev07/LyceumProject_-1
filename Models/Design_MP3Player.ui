@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>484</width>
-    <height>371</height>
+    <width>818</width>
+    <height>572</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -158,6 +158,17 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="dbButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../images/db.png</normaloff>../images/db.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="volumeicon">
         <property name="text">
          <string/>
@@ -190,7 +201,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>484</width>
+     <width>818</width>
      <height>21</height>
     </rect>
    </property>
