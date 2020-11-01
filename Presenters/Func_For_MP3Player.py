@@ -1,12 +1,17 @@
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+import os
+import sqlite3
+
 from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 from PyQt5.QtMultimedia import *
 from PyQt5.QtMultimediaWidgets import *
-import os
-# Импортировали все модули из PyQt5
+from PyQt5.QtWidgets import *
 
+from Models.Design_DB import Db_Window
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Импортируем наш дизайн
+
+
+# Импортировали все модули из PyQt5
 
 
 def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция для преобразования времени в миллисекунды
@@ -144,6 +149,10 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
 
         self.show()  # Воспроизводим GUI приложения на экран
 
+        """"Подключаем кнопку базы данных к методу показана окна базы данных"""
+
+        self.dbButton.clicked.connect(self.viewDataBase)
+
     """"В методе dragEnterEvent проверяется,
     является ли объект,который мы перетащили файлом (по пути до файла)"""
 
@@ -243,6 +252,12 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def erroralert(self, *args):
         print(args)
 
+    """Создаем метод для отображения окна с базой данных композиций"""
+
+    def viewDataBase(self):
+        self.dataBase = dataBase_Window()
+        self.dataBase.show()
+
 
 """"Создаем класс для диалогового окна, для неверного расширение файла"""
 
@@ -269,8 +284,13 @@ class Log(QDialog):
 """"Создаем класс для просмотра базы данных и выбора композиции"""
 
 
-class dataBase_Window(QMainWindow):
-    pass
+class dataBase_Window(QMainWindow, Db_Window):
+    # Это здесь нужно для доступа к переменным, методам
+    # и т.д. в файле Func_For_MP3Player.py
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)  # Это нужно для инициализации нашего дизайна
+        self.resultDBTable.setEnabled(False)
 
 
 if __name__ == '__main__':
