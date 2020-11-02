@@ -7,11 +7,18 @@ from PyQt5.QtMultimedia import *
 from PyQt5.QtMultimediaWidgets import *
 from PyQt5.QtWidgets import *
 
-from Models.Design_DB import Db_Window
+from Models.Design_DB import Db_Window  # Импортируем дизайн окна, связанного с бд
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Импортируем наш дизайн
 
 
 # Импортировали все модули из PyQt5
+
+# con = sqlite3.connect("music.db")
+# cur = con.cursor()
+# result = cur.execute("""INSERT INTO MusicTable (id) VALUES(2)""")
+# con.commit()
+# con.close()
+# Тесты с бд
 
 
 def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция для преобразования времени в миллисекунды
@@ -187,17 +194,17 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
                                               "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
 
         music_db = []  # Создаем пустой список, в котором будет хранится все нужное для бд
-
         try:  # Проверяем расширение файла
             check_ext(path)
-            self.playlist.addMedia(
-                QMediaContent(QUrl.fromLocalFile(path)
-                              )
-            )
+            self.playlist.addMedia(QMediaContent
+                                   (QUrl.fromLocalFile(path)
+                                    )
+                                   )
+
             music_db.append(path)
             for i in music_db:
                 f = os.path.basename(i)
-                print(f[0:f.rfind('.')])
+            print(f)
 
             # f = os.path.basename(path)
             # print(f[0:f.rfind('.')]) Имя песни без расширения
@@ -304,6 +311,11 @@ class dataBase_Window(QMainWindow, Db_Window):
         super().__init__()
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
 
+    """"Присоединяем кнопку к методу viewDataBase"""
+
+    def connect_add(self, viewDataBase):
+        self.addToPlaylistButton.clicked.connect(viewDataBase)
+
 
 if __name__ == '__main__':
     app = QApplication([])
@@ -327,6 +339,5 @@ if __name__ == '__main__':
     palette.setColor(QPalette.HighlightedText, Qt.black)
     app.setPalette(palette)
     app.setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }")
-
     window = MP3_MainWindow()
     app.exec_()
