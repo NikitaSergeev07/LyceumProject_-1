@@ -185,12 +185,25 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def open_file(self):
         path, h = QFileDialog.getOpenFileName(self, "Open file", "",  # Определяем форматы, который поддерживает плеер
                                               "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
+
+        music_db = []  # Создаем пустой список, в котором будет хранится все нужное для бд
+
         try:  # Проверяем расширение файла
             check_ext(path)
             self.playlist.addMedia(
                 QMediaContent(QUrl.fromLocalFile(path)
                               )
             )
+            music_db.append(path)
+            for i in music_db:
+                f = os.path.basename(i)
+                print(f[0:f.rfind('.')])
+
+            # f = os.path.basename(path)
+            # print(f[0:f.rfind('.')]) Имя песни без расширения
+            # f = os.path.basename(i)
+            # print(f[0:]) Имя песни с расширением
+
         except ValueError:
             self.log = Log()  # Если расширение не соотвествует стандарту нашей программы
             self.log.show()  # Выводим окно с поясняющим текстом
@@ -290,7 +303,6 @@ class dataBase_Window(QMainWindow, Db_Window):
     def __init__(self):
         super().__init__()
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
-        self.resultDBTable.setEnabled(False)
 
 
 if __name__ == '__main__':
