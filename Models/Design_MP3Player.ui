@@ -158,17 +158,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="dbButton">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../images/db.png</normaloff>../images/db.png</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QLabel" name="volumeicon">
         <property name="text">
          <string/>

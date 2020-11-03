@@ -1,5 +1,4 @@
 import os
-import sqlite3
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -7,18 +6,10 @@ from PyQt5.QtMultimedia import *
 from PyQt5.QtMultimediaWidgets import *
 from PyQt5.QtWidgets import *
 
-from Models.Design_DB import Db_Window  # Импортируем дизайн окна, связанного с бд
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Импортируем наш дизайн
 
 
 # Импортировали все модули из PyQt5
-
-# con = sqlite3.connect("music.db")
-# cur = con.cursor()
-# result = cur.execute("""INSERT INTO MusicTable (id) VALUES(2)""")
-# con.commit()
-# con.close()
-# Тесты с бд
 
 
 def hoursHours_minutesMinutes_secondsSeconds(milliseconds):  # Функция для преобразования времени в миллисекунды
@@ -158,8 +149,6 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
 
         """"Подключаем кнопку базы данных к методу показана окна базы данных"""
 
-        self.dbButton.clicked.connect(self.viewDataBase)
-
     """"В методе dragEnterEvent проверяется,
     является ли объект,который мы перетащили файлом (по пути до файла)"""
 
@@ -192,19 +181,12 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def open_file(self):
         path, h = QFileDialog.getOpenFileName(self, "Open file", "",  # Определяем форматы, который поддерживает плеер
                                               "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
-
-        music_db = []  # Создаем пустой список, в котором будет хранится все нужное для бд
         try:  # Проверяем расширение файла
             check_ext(path)
             self.playlist.addMedia(QMediaContent
                                    (QUrl.fromLocalFile(path)
                                     )
                                    )
-
-            music_db.append(path)
-            for i in music_db:
-                f = os.path.basename(i)
-            print(f)
 
             # f = os.path.basename(path)
             # print(f[0:f.rfind('.')]) Имя песни без расширения
@@ -272,12 +254,6 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def erroralert(self, *args):
         print(args)
 
-    """Создаем метод для отображения окна с базой данных композиций"""
-
-    def viewDataBase(self):
-        self.dataBase = dataBase_Window()
-        self.dataBase.show()
-
 
 """"Создаем класс для диалогового окна, для неверного расширение файла"""
 
@@ -299,22 +275,6 @@ class Log(QDialog):
         self.logtext.move(10, 10)
         self.logtext.setText("Выбрано неверное расширение файла")
         self.logtext.setEnabled(False)
-
-
-""""Создаем класс для просмотра базы данных и выбора композиции"""
-
-
-class dataBase_Window(QMainWindow, Db_Window):
-    # Это здесь нужно для доступа к переменным, методам
-    # и т.д. в файле Func_For_MP3Player.py
-    def __init__(self):
-        super().__init__()
-        self.setupUi(self)  # Это нужно для инициализации нашего дизайна
-
-    """"Присоединяем кнопку к методу viewDataBase"""
-
-    def connect_add(self, viewDataBase):
-        self.addToPlaylistButton.clicked.connect(viewDataBase)
 
 
 if __name__ == '__main__':
