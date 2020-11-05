@@ -45,16 +45,11 @@
      <addaction name="actionJust_Green"/>
      <addaction name="actionJust_Blue_2"/>
     </widget>
-    <widget class="QMenu" name="menuCurvies">
-     <property name="title">
-      <string>Curvies</string>
-     </property>
-    </widget>
     <addaction name="actionSepia"/>
     <addaction name="actionNegative"/>
     <addaction name="separator"/>
     <addaction name="menuJust_Blue"/>
-    <addaction name="menuCurvies"/>
+    <addaction name="actionCurvies"/>
    </widget>
    <widget class="QMenu" name="menuCropper">
     <property name="title">
@@ -307,6 +302,11 @@
   <action name="actionText">
    <property name="text">
     <string>Text</string>
+   </property>
+  </action>
+  <action name="actionCurvies">
+   <property name="text">
+    <string>Curvies</string>
    </property>
   </action>
  </widget>
