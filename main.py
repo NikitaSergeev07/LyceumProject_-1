@@ -6,6 +6,7 @@ from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Это наш конв
 from Presenters.Func_For_MP3Player import MP3_MainWindow  # Импортируем функции нашего MP3Player
 from Models.Design_PhotoProcessing import \
     Ui_PhotoProcessingWindow  # Это наш конвертированный файл дизайна PhotoProcessing
+from db_handler.main_db import Interface  # Импортируем работу с бд
 
 
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
@@ -56,6 +57,15 @@ def main():
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
     mainMenu_window = Window_of_Main()  # Создаём объект класса ExampleApp
     mainMenu_window.show()  # Показываем окно
+
+    """"Пытаемся открыть окно авторизации пользователя"""
+
+    try:
+        db_window = Interface()
+        db_window.show()
+    except Exception:
+        pass
+
     app.exec_()  # и запускаем приложение
 
 
