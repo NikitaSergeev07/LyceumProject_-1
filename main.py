@@ -61,11 +61,10 @@ def main():
     """"Пытаемся открыть окно авторизации пользователя"""
 
     try:
-        db_window = Interface()
-        db_window.show()
+        db_window = Interface()  # Создаем экземпляр класса нашего взаимодействия с бд
+        db_window.show()  # Показываем нашу авторизацию
     except Exception:
-        pass
-
+        print("Что-то пошло не так!")
     app.exec_()  # и запускаем приложение
 
 
