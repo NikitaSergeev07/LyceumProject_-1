@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="">
+    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="add ability to upload file, but found a problem with all buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoEditor.py" afterDir="false" />
     </list>
@@ -48,7 +48,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.VCS" />
   </component>
-  <component name="RunManager" selected="Python.PhotoEditor">
+  <component name="RunManager" selected="Python.PIL2.0">
     <configuration name="1 - Каталог библиотеки" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,6 +62,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/solution/1 - Каталог библиотеки/1 - Каталог библиотеки.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PIL2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\q123d\AppData\Local\Programs\Python\Python39\python.ex\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/PIL2.0.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,9 +181,11 @@
       <item itemvalue="Python.test" />
       <item itemvalue="Python.test2" />
       <item itemvalue="Python.1 - Каталог библиотеки" />
+      <item itemvalue="Python.PIL2.0" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PIL2.0" />
         <item itemvalue="Python.PhotoEditor" />
         <item itemvalue="Python.1 - Каталог библиотеки" />
         <item itemvalue="Python.test2" />
@@ -182,6 +205,14 @@
       <option name="presentableId" value="Default" />
       <updated>1604246484627</updated>
     </task>
+    <task id="LOCAL-00001" summary="add ability to upload file, but found a problem with all buttons">
+      <created>1604669002177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604669002177</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,13 +228,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="add ability to upload file, but found a problem with all buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ability to upload file, but found a problem with all buttons" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604578938772">
+    <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604669082806">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604578938772" />
+    <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604669082806" />
     <state x="605" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604253447185">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -216,22 +248,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="656" y="403" key="Github.ShareDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604255096888" />
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1604668716929">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1604670112485">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1604668716929" />
-    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1604668716929">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1604670112485" />
+    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1604670112485">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1604668716929" />
-    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1604668716928">
+    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1604670112485" />
+    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1604670112485">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1604668716928" />
-    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1604668716929">
+    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1604670112485" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1604670112485">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1604668716929" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1604670112485" />
     <state width="1659" height="336" key="GridCell.Tab.1.bottom" timestamp="1604668716917">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -252,6 +284,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1604255069368" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1604669008782">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1604669008782" />
     <state x="670" y="296" key="svn.repositoryBrowser" timestamp="1604255173584">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

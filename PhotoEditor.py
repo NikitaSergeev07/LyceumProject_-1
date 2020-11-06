@@ -4,8 +4,8 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import *
+from PIL import Image
 
-Picture_SIZE = [400, 400]
 
 
 class MyWidget(QMainWindow):
@@ -15,7 +15,10 @@ class MyWidget(QMainWindow):
         self.current = 'newFile.png'
         self.pixmap = QPixmap(self.current)
         self.image = QLabel(self)
-        self.image.resize(700, 700)
+        self.image.move(0, 23)
+        img = Image.open(self.current)
+        x, y = img.size
+        self.image.resize(x, y)
         self.image.setPixmap(self.pixmap)
         self.actionOpen.triggered.connect(self.openFile)
         self.actionNew.triggered.connect(self.newFile)
@@ -25,7 +28,10 @@ class MyWidget(QMainWindow):
         self.pixmap = QPixmap(filename)
         self.image.setPixmap(self.pixmap)
         self.image = QLabel(self)
-        self.image.resize(700, 700)
+        self.image.move(0, 23)
+        im = Image.open(str(self.filename))
+        z, a = im.size
+        self.image.resize(z, a)
 
     def newFile(self):
         pass
