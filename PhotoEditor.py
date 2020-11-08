@@ -1,4 +1,5 @@
 import sys
+import io
 from PyQt5 import uic
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -22,6 +23,7 @@ class MyWidget(QMainWindow):
         self.image.setPixmap(self.pixmap)
         self.actionOpen.triggered.connect(self.openFile)
         self.actionNew.triggered.connect(self.newFile)
+        self.actionJust_Red.triggered.connect(self.justRed)
 
     def openFile(self):
         filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
@@ -29,12 +31,22 @@ class MyWidget(QMainWindow):
         self.image.setPixmap(self.pixmap)
         self.image = QLabel(self)
         self.image.move(0, 23)
-        im = Image.open(str(self.filename))
-        z, a = im.size
-        self.image.resize(z, a)
 
     def newFile(self):
         pass
+
+    def justRed(self):
+        img = Image.open(self.filename)
+        pixels = img.load()
+        x, y = img.size
+        for i in range(x):
+            for j in range(y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = 0, g, 0
+        img.save(self.new_img)
+        self.pixmap = QPixmap(self.new_img)
+        self.image.setPixmap(self.pixmap)
+
 
 
 if __name__ == '__main__':
