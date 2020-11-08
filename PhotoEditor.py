@@ -26,8 +26,8 @@ class MyWidget(QMainWindow):
         self.actionJust_Red.triggered.connect(self.justRed)
 
     def openFile(self):
-        filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
-        self.pixmap = QPixmap(filename)
+        self.filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
+        self.pixmap = QPixmap(self.filename)
         self.image.setPixmap(self.pixmap)
         self.image = QLabel(self)
         self.image.move(0, 23)
@@ -36,9 +36,18 @@ class MyWidget(QMainWindow):
         pass
 
     def justRed(self):
-        img = Image.open(self.filename)
-        pixels = img.load()
-        x, y = img.size
+        img = QImage(self.filename)
+        buffer = QBuffer()
+        buffer.open(QIODevice.ReadWrite)
+        img.save(buffer, "PNG")
+
+        strio = cStringIO.StringIO()
+        strio.write(buffer.data())
+        buffer.close()
+        strio.seek(0)
+        pil_img = Image.open(strio)
+        pixels = pil_img.load()
+        x, y = pil_img.size
         for i in range(x):
             for j in range(y):
                 r, g, b = pixels[i, j]
