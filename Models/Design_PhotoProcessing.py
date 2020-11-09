@@ -17,9 +17,6 @@ class Ui_PhotoProcessingWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
-        self.graphicsView.setGeometry(QtCore.QRect(5, 50, 611, 501))
-        self.graphicsView.setObjectName("graphicsView")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
@@ -174,7 +171,7 @@ class Ui_PhotoProcessingWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "PhotoProcessing"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.menuOpen_File.setTitle(_translate("MainWindow", "File"))
         self.menuFilters.setTitle(_translate("MainWindow", "Filters"))
         self.menuJust_Blue.setTitle(_translate("MainWindow", "Colors"))

@@ -17,9 +17,9 @@ class Interface(QtWidgets.QWidget):
         self.ui.setupUi(self)
 
         # Подключаем кнопки к методам
-        self.ui.pushButton.clicked.connect(self.reg)
-        self.ui.pushButton_2.clicked.connect(self.auth)
-        self.base_line_edit = [self.ui.lineEdit, self.ui.lineEdit_2]
+        self.ui.pushButton.clicked.connect(self.reg)  # Кнопка регистрации пользователя
+        self.ui.pushButton_2.clicked.connect(self.auth)  # Кнопка авторизации пользователя
+        self.base_line_edit = [self.ui.lineEdit, self.ui.lineEdit_2]  # Кнопки ввода пароля и ника пользователя
 
         # Делаем различные подключения
         self.check_db = CheckThread()
@@ -52,6 +52,11 @@ class Interface(QtWidgets.QWidget):
         name = self.ui.lineEdit.text()
         passw = self.ui.lineEdit_2.text()
         self.check_db.thr_register(name, passw)
+
+
+
+
+
 
 
 if __name__ == "__main__":

@@ -3,10 +3,13 @@ from PyQt5 import QtWidgets  # Импортируем все необходим�
 from PyQt5.QtWidgets import QMainWindow  # Импортируем все необходимое для работы с PyQt5
 from Models.Design_MainWindow import Ui_MainWindow  # Это наш конвертированный файл дизайна MainWindow
 from Models.Design_MP3Player import Ui_MP3PlayerWindow  # Это наш конвертированный файл дизайна MP3Player
-from Presenters.Func_For_MP3Player import MP3_MainWindow  # Импортируем функции нашего MP3Player
 from Models.Design_PhotoProcessing import \
     Ui_PhotoProcessingWindow  # Это наш конвертированный файл дизайна PhotoProcessing
+from Presenters.Func_For_MP3Player import MP3_MainWindow  # Импортируем функции нашего MP3Player
+from Presenters.Func_For_PhotoProcessing import \
+    PhotoProcessing_Window  # Импортируем функции нашего Func_For_PhotoProcessing
 from db_handler.main_db import Interface  # Импортируем работу с бд
+from db_handler.db_handler import *
 
 
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
@@ -29,7 +32,7 @@ class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
     """"Создаем метод для открытия PhotoProcessing"""
 
     def openPhotoProcessing(self):
-        self.PhotoProcessing = Window_of_PhotoProcessing()  # Создаем экземпляр нашего класса с PhotoProcessing
+        self.PhotoProcessing = PhotoProcessing_Window()  # Создаем экземпляр нашего класса с PhotoProcessing
         self.PhotoProcessing.show()  # Выводим пользователю приложение на экран
 
 
@@ -54,18 +57,21 @@ class Window_of_PhotoProcessing(QMainWindow, Ui_PhotoProcessingWindow):
 
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    mainMenu_window = Window_of_Main()  # Создаём объект класса ExampleApp
-    mainMenu_window.show()  # Показываем окно
-
-    """"Пытаемся открыть окно авторизации пользователя"""
-
     try:
-        db_window = Interface()  # Создаем экземпляр класса нашего взаимодействия с бд
-        db_window.show()  # Показываем нашу авторизацию
+        app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
+        mainMenu_window = Window_of_Main()  # Создаём объект класса ExampleApp
+        mainMenu_window.show()  # Показываем окно
+
+        """"Пытаемся открыть окно авторизации пользователя"""
+
+        try:
+            db_window = Interface()  # Создаем экземпляр класса нашего взаимодействия с бд
+            db_window.show()  # Показываем нашу авторизацию
+        except Exception as exp:
+            print("Что-то пошло не так!", exp)
+        app.exec_()  # и запускаем приложение
     except Exception:
         print("Что-то пошло не так!")
-    app.exec_()  # и запускаем приложение
 
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
