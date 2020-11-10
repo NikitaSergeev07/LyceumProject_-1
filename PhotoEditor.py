@@ -1,6 +1,6 @@
 import io
 import sys
-from PIL import *
+from PIL import Image, ImageOps, Image
 from PyQt5 import uic
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -13,31 +13,20 @@ class MyWidget(QMainWindow):
         super().__init__()
         uic.loadUi('supadesign.ui', self)
         self.Slider.setVisible(False)
-        self.freeimg = "freeFile.png"
         self.actionOpen.triggered.connect(self.openFile)
         self.actionNew.triggered.connect(self.newFile)
         self.actionJust_Red.triggered.connect(self.justRed)
 
     def openFile(self):
         self.filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
+        self.freeimg = self.filename
         self.pixmap = QPixmap(self.filename)
         self.image.setPixmap(self.pixmap)
-        img = QImage(self.filename)
-        buffer = QBuffer()
-        buffer.open(QBuffer.ReadWrite)
-        img.save(buffer, "PNG")
-        pil_img = Image.open(io.BytesIO(buffer.data()))
-        x, y = pil_img.size
-        self.image.resize(x, y)
 
     def newFile(self):
-        self.current = 'newFile.png'
-        self.pixmap = QPixmap(self.current)
-        img = Image.open(self.current)
-        x, y = img.size
-        self.image.resize(x, y)
+        self.filename = 'newFile.png'
+        self.pixmap = QPixmap(self.filename)
         self.image.setPixmap(self.pixmap)
-        self.filename = self.current
 
     def justRed(self):
         img = QImage(self.filename)
@@ -83,9 +72,9 @@ class MyWidget(QMainWindow):
             for j in range(y):
                 r, g, b = pixels[i, j]
                 pixels[i, j] = 0, 0, b
-        img.save(self.freeimg)
-        self.pixmap = QPixmap(self.freeimg)
-        self.image.setPixmap(self.pixmap)
+        img.save(self.filename)
+        self.pixmap = QPixmap(self.filename)
+        self.image.setPixmap(QtGui.QPixmap(self.filename))
 
     def Negative(self):
         img = QImage(self.filename)
@@ -93,14 +82,8 @@ class MyWidget(QMainWindow):
         buffer.open(QBuffer.ReadWrite)
         img.save(buffer, "PNG")
         pil_img = Image.open(io.BytesIO(buffer.data()))
-        pixels = pil_img.load()
-        x, y = pil_img.size
-        for i in range(x):
-            for j in range(y):
-                r, g, b = pixels[i, j]
-                pixels[i, j] = r, 0, 0
-        img.save(self.freeimg)
-        self.pixmap = QPixmap(self.freeimg)
+        pil_img = PIL.ImageOps.invert(pil_img)
+        self.pixmap = QPixmap(self.pil_img)
         self.image.setPixmap(self.pixmap)
 
 
