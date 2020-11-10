@@ -42,17 +42,21 @@ class Interface(QtWidgets.QWidget):
     @check_input
     # Если ввод правильный, то авторизуем пользователя
     def auth(self):
-        name = self.ui.lineEdit.text()
-        passw = self.ui.lineEdit_2.text()
-        self.check_db.thr_login(name, passw)
-
+        try:
+            name = self.ui.lineEdit.text()
+            passw = self.ui.lineEdit_2.text()
+            self.check_db.thr_login(name, passw)
+        except Exception:
+            print("Что-то пошло не так!")
     @check_input
     # Если ввод правильный, то регистрируем пользователя
     def reg(self):
-        name = self.ui.lineEdit.text()
-        passw = self.ui.lineEdit_2.text()
-        self.check_db.thr_register(name, passw)
-
+        try:
+            name = self.ui.lineEdit.text()
+            passw = self.ui.lineEdit_2.text()
+            self.check_db.thr_register(name, passw)
+        except Exception:
+            print("Что-то пошло не так!")
 
 
 
