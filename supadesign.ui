@@ -528,7 +528,7 @@
      <x>0</x>
      <y>0</y>
      <width>1017</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOpen_File">
@@ -549,13 +549,13 @@
      <property name="title">
       <string>Colors</string>
      </property>
-     <addaction name="actionJust_Red"/>
-     <addaction name="actionJust_Green"/>
-     <addaction name="actionJust_Blue_2"/>
+     <addaction name="Redder"/>
+     <addaction name="Greener"/>
+     <addaction name="Bluer"/>
     </widget>
-    <addaction name="actionBlack_n_White"/>
-    <addaction name="actionSepia"/>
-    <addaction name="actionNegative"/>
+    <addaction name="BnW"/>
+    <addaction name="Sepia"/>
+    <addaction name="Negative"/>
     <addaction name="separator"/>
     <addaction name="menuJust_Blue"/>
     <addaction name="actionCurvies"/>
@@ -638,22 +638,22 @@
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSepia">
+  <action name="Sepia">
    <property name="text">
     <string>Sepia</string>
    </property>
   </action>
-  <action name="actionNegative">
+  <action name="Negative">
    <property name="text">
     <string>Negative</string>
    </property>
   </action>
-  <action name="actionJust_Green">
+  <action name="Greener">
    <property name="text">
     <string>Just Green</string>
    </property>
   </action>
-  <action name="actionJust_Red">
+  <action name="Redder">
    <property name="text">
     <string>Just Red</string>
    </property>
@@ -743,7 +743,7 @@
     <string>Free Crop</string>
    </property>
   </action>
-  <action name="actionJust_Blue_2">
+  <action name="Bluer">
    <property name="text">
     <string>Just Blue</string>
    </property>
@@ -818,7 +818,7 @@
     <string>Curvies</string>
    </property>
   </action>
-  <action name="actionBlack_n_White">
+  <action name="BnW">
    <property name="text">
     <string>Black'n'White</string>
    </property>

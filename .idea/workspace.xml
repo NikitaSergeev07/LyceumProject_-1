@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="another one nonworking variant">
+    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Design_PhotoProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoEditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/butcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/freeFile.png" beforeDir="false" afterPath="$PROJECT_DIR$/freeFile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.qrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/supadesign.ui" beforeDir="false" afterPath="$PROJECT_DIR$/supadesign.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +50,35 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.PIL2.0 (1)">
+  <component name="RunManager" selected="Python.PhotoEditor">
+    <configuration name="1. PIL 2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Future Program(name to Change)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PyQt5/PIL 2/1 - PIL 2.0" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PyQt5/PIL 2/1 - PIL 2.0/1. PIL 2.0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="L-system" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,27 +142,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PIP2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\q123d\AppData\Local\Programs\Python\Python39\python.ex\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PyQt5" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PyQt5/PIP2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="PhotoEditor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -183,17 +188,17 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.PhotoEditor" />
       <item itemvalue="Python.PIL2.0" />
-      <item itemvalue="Python.PIP2" />
       <item itemvalue="Python.L-system" />
       <item itemvalue="Python.PIL2.0 (1)" />
+      <item itemvalue="Python.1. PIL 2.0" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PhotoEditor" />
+        <item itemvalue="Python.1. PIL 2.0" />
         <item itemvalue="Python.PIL2.0 (1)" />
         <item itemvalue="Python.PIL2.0" />
-        <item itemvalue="Python.PhotoEditor" />
         <item itemvalue="Python.L-system" />
-        <item itemvalue="Python.PIP2" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605016569040</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="IT WORKS!!!">
+      <created>1605041540927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605041540928</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +261,8 @@
     <MESSAGE value="add ability to upload file, but found a problem with all buttons" />
     <MESSAGE value="AOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAO" />
     <MESSAGE value="added some functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some functions" />
+    <MESSAGE value="IT WORKS!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="IT WORKS!!!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604861020206">
@@ -268,22 +281,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="656" y="403" key="Github.ShareDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604255096888" />
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605022542760">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605099551197">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605022542760" />
-    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605022542760">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605099551197" />
+    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605099551197">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605022542760" />
-    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605022542760">
+    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605099551197" />
+    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605099551196">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605022542760" />
-    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605022542760">
+    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605099551196" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605099551197">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605022542760" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605099551197" />
     <state width="1659" height="336" key="GridCell.Tab.1.bottom" timestamp="1605015663298">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -304,10 +317,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1604861057156" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605041525242">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605041546759">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605041525242" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605041546759" />
     <state x="657" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604779165258">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
