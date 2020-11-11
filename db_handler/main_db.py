@@ -48,6 +48,7 @@ class Interface(QtWidgets.QWidget):
             self.check_db.thr_login(name, passw)
         except Exception:
             print("Что-то пошло не так!")
+
     @check_input
     # Если ввод правильный, то регистрируем пользователя
     def reg(self):
@@ -57,10 +58,6 @@ class Interface(QtWidgets.QWidget):
             self.check_db.thr_register(name, passw)
         except Exception:
             print("Что-то пошло не так!")
-
-
-
-
 
 
 if __name__ == "__main__":

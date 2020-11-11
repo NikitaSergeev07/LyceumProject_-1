@@ -9,8 +9,6 @@ from Presenters.Func_For_MP3Player import MP3_MainWindow  # Импортируе
 from Presenters.Func_For_PhotoProcessing import \
     PhotoProcessing_Window  # Импортируем функции нашего Func_For_PhotoProcessing
 from db_handler.main_db import Interface  # Импортируем работу с бд
-from db_handler.db_handler import *
-from db_handler.check_db import *
 
 
 class Window_of_Main(QMainWindow, Ui_MainWindow):  # Главное меню
