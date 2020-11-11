@@ -1,85 +1,209 @@
 import sys
-import os
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtMultimedia import *
-from PyQt5.QtMultimediaWidgets import *
-from PyQt5.QtWidgets import *
-from Models.Design_PhotoProcessing import Ui_PhotoProcessingWindow  # Импортируем наш дизайн
+
 from PIL import Image
-import sqlite3
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+
+from Models.Design_PhotoProcessing import Ui_PhotoProcessingWindow
 
 
-def check_ext(path):
-    _, ext = os.path.splitext(path)
-    if ext not in (".png", ".jpg", ".jpeg"):  # Проверяем расширения mp3, mp4, mov
-        raise ValueError()
-
-
-# Импортировали все необходимое
-
-
-class PhotoProcessing_Window(QMainWindow, Ui_PhotoProcessingWindow):  # PhotoProcessing меню
-    """"Создаем конструктор класса PhotoProcessing_Window"""
-
+class PhotoProcessing_Window(QMainWindow, Ui_PhotoProcessingWindow):
     def __init__(self):
-        # Это здесь нужно для доступа к переменным, методам
-        # и т.д. в файле Design_MainWindow.py
         super().__init__()
-        self.setupUi(self)  # Это нужно для инициализации нашего дизайна
-        self.newimg = 'newimg'
-        self.actionOpen.triggered.connect(self.initUI)
-        self.initUI()
+        self.coefficient = 0
+        self.setupUi(self)
+        self.image.setPixmap(QPixmap('background.png'))
+        self.actionOpen.triggered.connect(self.openFile)
         self.actionNew.triggered.connect(self.newFile)
+        self.Redder.triggered.connect(self.justRed)
+        self.Greener.triggered.connect(self.justGreen)
+        self.Bluer.triggered.connect(self.justBlue)
+        self.Negative.triggered.connect(self.nnegative)
+        self.All.triggered.connect(self.all)
+        self.actionCurvies.triggered.connect(self.Inbright)
+        self.BnW.triggered.connect(self.blwh)
+        self.Sepia.triggered.connect(self.sepiit)
+        self.actionGray_Skale.triggered.connect(self.gray_scale)
+        self.actionContrast.triggered.connect(self.contrast)
+        self.actionSquare_2.triggered.connect(self.crop_square)
 
-    # def load_image(self, file_name):
-    #     pixmap = QPixmap(file_name)
-    #
-    #     self.label = QLabel(self)
-    #     self.label.setPixmap(pixmap)
-    #     self.label.resize(pixmap.width(), pixmap.height())
-    #
-    #     self.resize(pixmap.width(), pixmap.height())
-    def initUI(self):
-        hbox = QHBoxLayout(self)
-        pixmap = QPixmap("butcher.png")
-        lbl = QLabel(self)
-        lbl.setPixmap(pixmap)
-        hbox.addWidget(lbl)
-        self.setLayout(hbox)
-
-        self.move(100, 200)
-        self.width()
-        self.height()
-        self.show()
-
-        # self.extention = self.current.split('.')[-1]  # Парсим расширение файла
-        # self.file = os.path.basename(self.current)  # Парсим имя файла без расширения
-        # self.name = self.file[0:self.file.rfind('.')]  # Парсим имя файла без расширения
-        # self.db_img = self.name + "." + self.extention
-        # print(self.db_img)
-        # self.newimg = self.newimg + "." + self.extention
-        # print(self.newimg)
-        # try:
-        #     check_ext(self.current)
-        #     # Подключаемся к нашей бд и создаем курсор
-        #     con = sqlite3.connect('photo.db')
-        #     cur = con.cursor()
-        #     cur.execute(
-        #         """INSERT INTO photo(name, path, extention) VALUES(?, ?, ?)"""), (
-        #         self.name, self.current, self.extention).fetchall()
-        #     # Закрываем соединение и курсор
-        #     con.commit()
-        #     con.close()
-        # except ValueError:
-        #     print("Что-то пошло не так")
+    def openFile(self):
+        self.filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
+        self.mainimg = Image.open(self.filename)
+        self.pic = self.mainimg.copy()
+        self.x, self.y = self.mainimg.size
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
 
     def newFile(self):
-        pass
+        try:
+            self.filename = 'newFile.png'
+            self.mainimg = Image.open(self.filename)
+            self.pic = self.mainimg.copy()
+            self.x, self.y = self.mainimg.size
+            self.pic.save('freeFile.png')
+            self.image.setPixmap(QPixmap('freeFile.png'))
+        except BaseException:
+            print("Что-то пошло не так")
+
+    def justRed(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = r, 0, 0
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def justGreen(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = 0, g, 0
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def justBlue(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = 0, 0, b
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def all(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = r, g, b
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def nnegative(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                pixels[i, j] = 256 - r, 256 - g, 256 - b
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def Inbright(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                pixels[i, j] = curve(pixels[i, j])
+
+    def blwh(self):
+        brightness, ok = QInputDialog.getInt(self, "Input Brightness", 'What brightness do you want to use?', 2, 1, 15,
+                                             1)
+        separator = 255 / brightness / 2 * 3
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                total = r + g + b
+                if total > separator:
+                    self.pic.putpixel((i, j), (255, 255, 255))
+                else:
+                    self.pic.putpixel((i, j), (0, 0, 0))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def sepiit(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                red = int(r * 0.393 + g * 0.769 + b * 0.189)
+                green = int(r * 0.349 + g * 0.686 + b * 0.168)
+                blue = int(r * 0.272 + g * 0.534 + b * 0.131)
+                self.pic.putpixel((i, j), (red, green, blue))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def gray_scale(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                gray = int(r * 0.2126 + g * 0.7152 + b * 0.0722)
+                self.pic.putpixel((i, j), (gray, gray, gray))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def contrast(self, value):
+        self.Slider.setVisible(True)
+        self.Slider.valueChanged[int].connect(self.contrast2)
+        if value:
+            self.coefficient = int(value) % 10
+
+    def contrast2(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+
+        avg = 0
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                avg += r * 0.299 + g * 0.587 + b * 0.114
+        avg /= self.pic.size[0] * self.pic.size[1]
+
+        palette = []
+        for i in range(256):
+            temp = int(avg + self.coefficient * (i - avg))
+            if temp < 0:
+                temp = 0
+            elif temp > 255:
+                temp = 255
+            palette.append(temp)
+
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                self.pic.putpixel((i, j), (palette[r], palette[g], palette[b]))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+        self.Slider.setVisible(False)
+
+    def crop_square(self):
+        self.pic = self.mainimg.copy()
+        self.pic = self.pic.crop((177, 882, 1179, 1707))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+
+def curve(pixel):
+    r, g, b = pixel
+    brightness = r + g + b
+    if brightness < 60:
+        k = 60 / (brightness + 1)
+        return min(255, int(r * k ** 2)), \
+               min(255, int(g * k ** 2)), \
+               min(255, int(b * k ** 2))
+    else:
+        return r, g, b
+
+
+def except_hook(cls, exception, traceback):
+    sys.__excepthook__(cls, exception, traceback)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = PhotoProcessing_Window()
-    ex.show()
-    sys.exit(app.exec_())
+    form = PhotoProcessing_Window()
+    form.show()
+    sys.excepthook = except_hook
+    sys.exit(app.exec())
