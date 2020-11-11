@@ -66,8 +66,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>620</y>
+      <x>10</x>
+      <y>610</y>
       <width>981</width>
       <height>31</height>
      </rect>
@@ -560,6 +560,8 @@
     <addaction name="separator"/>
     <addaction name="menuJust_Blue"/>
     <addaction name="actionCurvies"/>
+    <addaction name="actionGray_Skale"/>
+    <addaction name="actionContrast"/>
    </widget>
    <widget class="QMenu" name="menuCropper">
     <property name="title">
@@ -816,7 +818,7 @@
   </action>
   <action name="actionCurvies">
    <property name="text">
-    <string>Curvies</string>
+    <string>Inbright like Curves</string>
    </property>
   </action>
   <action name="BnW">
@@ -827,6 +829,16 @@
   <action name="All">
    <property name="text">
     <string>All</string>
+   </property>
+  </action>
+  <action name="actionGray_Skale">
+   <property name="text">
+    <string>Gray Skale</string>
+   </property>
+  </action>
+  <action name="actionContrast">
+   <property name="text">
+    <string>Contrast</string>
    </property>
   </action>
  </widget>

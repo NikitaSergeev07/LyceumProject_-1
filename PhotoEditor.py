@@ -10,6 +10,7 @@ from Design_PhotoProcessing import Ui_MainWindow
 class MyWidget(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        self.coefficient = 0
         self.setupUi(self)
         self.image.setPixmap(QPixmap('background.png'))
         self.actionOpen.triggered.connect(self.openFile)
@@ -21,6 +22,10 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         self.All.triggered.connect(self.all)
         self.actionCurvies.triggered.connect(self.Inbright)
         self.BnW.triggered.connect(self.blwh)
+        self.Sepia.triggered.connect(self.sepiit)
+        self.actionGray_Skale.triggered.connect(self.gray_scale)
+        self.actionContrast.triggered.connect(self.contrast)
+        self.actionSquare_2.triggered.connect(self.crop_square)
 
     def openFile(self):
         self.filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
@@ -74,7 +79,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         for i in range(self.x):
             for j in range(self.y):
                 r, g, b = pixels[i, j]
-                pixels[i, j] = 0, 0, b
+                pixels[i, j] = r, g, b
         self.pic.save('freeFile.png')
         self.image.setPixmap(QPixmap('freeFile.png'))
 
@@ -84,7 +89,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         for i in range(self.x):
             for j in range(self.y):
                 r, g, b = pixels[i, j]
-                pixels[i, j] = 255 - r, 255 - g, 255 - b
+                pixels[i, j] = 256 - r, 256 - g, 256 - b
         self.pic.save('freeFile.png')
         self.image.setPixmap(QPixmap('freeFile.png'))
 
@@ -109,6 +114,70 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                     self.pic.putpixel((i, j), (255, 255, 255))
                 else:
                     self.pic.putpixel((i, j), (0, 0, 0))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def sepiit(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                red = int(r * 0.393 + g * 0.769 + b * 0.189)
+                green = int(r * 0.349 + g * 0.686 + b * 0.168)
+                blue = int(r * 0.272 + g * 0.534 + b * 0.131)
+                self.pic.putpixel((i, j), (red, green, blue))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def gray_scale(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                gray = int(r * 0.2126 + g * 0.7152 + b * 0.0722)
+                self.pic.putpixel((i, j), (gray, gray, gray))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+
+    def contrast(self, value):
+        self.Slider.setVisible(True)
+        self.Slider.valueChanged[int].connect(self.contrast2)
+        if value:
+            self.coefficient = int(value) % 10
+
+    def contrast2(self):
+        self.pic = self.mainimg.copy()
+        pixels = self.pic.load()
+
+        avg = 0
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                avg += r * 0.299 + g * 0.587 + b * 0.114
+        avg /= self.pic.size[0] * self.pic.size[1]
+
+        palette = []
+        for i in range(256):
+            temp = int(avg + self.coefficient * (i - avg))
+            if temp < 0:
+                temp = 0
+            elif temp > 255:
+                temp = 255
+            palette.append(temp)
+
+        for i in range(self.x):
+            for j in range(self.y):
+                r, g, b = pixels[i, j]
+                self.pic.putpixel((i, j), (palette[r], palette[g], palette[b]))
+        self.pic.save('freeFile.png')
+        self.image.setPixmap(QPixmap('freeFile.png'))
+        self.Slider.setVisible(False)
+
+    def crop_square(self):
+        self.pic = self.mainimg.copy()
+        self.pic = self.pic.crop((177, 882, 1179, 1707))
         self.pic.save('freeFile.png')
         self.image.setPixmap(QPixmap('freeFile.png'))
 

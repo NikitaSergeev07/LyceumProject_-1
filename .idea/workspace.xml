@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="">
+    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="added some functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Design_PhotoProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Design_PhotoProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoEditor.py" afterDir="false" />
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605100020030</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added some functions">
+      <created>1605112517970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605112517970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,10 +272,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add ability to upload file, but found a problem with all buttons" />
     <MESSAGE value="AOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAOAO" />
-    <MESSAGE value="added some functions" />
     <MESSAGE value="IT WORKS!!!" />
     <MESSAGE value="it works2" />
-    <option name="LAST_COMMIT_MESSAGE" value="it works2" />
+    <MESSAGE value="added some functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604861020206">
@@ -287,22 +294,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="656" y="403" key="Github.ShareDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604255096888" />
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605112279518">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605124675279">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605112279518" />
-    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605112279518">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605124675279" />
+    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605124675279">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605112279518" />
-    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605112279518">
+    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605124675279" />
+    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605124675278">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605112279518" />
-    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605112279518">
+    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605124675278" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605124675279">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605112279518" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605124675279" />
     <state width="1659" height="336" key="GridCell.Tab.1.bottom" timestamp="1605015663298">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -323,10 +330,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1604861057156" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605100036137">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605112529942">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605100036137" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605112529942" />
     <state x="657" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604779165258">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
