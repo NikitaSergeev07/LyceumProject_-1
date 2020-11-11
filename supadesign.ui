@@ -552,6 +552,7 @@
      <addaction name="Redder"/>
      <addaction name="Greener"/>
      <addaction name="Bluer"/>
+     <addaction name="All"/>
     </widget>
     <addaction name="BnW"/>
     <addaction name="Sepia"/>
@@ -821,6 +822,11 @@
   <action name="BnW">
    <property name="text">
     <string>Black'n'White</string>
+   </property>
+  </action>
+  <action name="All">
+   <property name="text">
+    <string>All</string>
    </property>
   </action>
  </widget>
