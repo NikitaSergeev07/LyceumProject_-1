@@ -280,6 +280,29 @@ class MP3_MainWindow(QMainWindow, Ui_MP3PlayerWindow):  # Создаем кла�
     def erroralert(self, *args):
         print(args)
 
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_F:
+            path, h = QFileDialog.getOpenFileName(self, "Open file", "",
+                                                  # Определяем форматы, который поддерживает плеер
+                                                  "mp3 Audio (*.mp3);mp4 Video (*.mp4);Movie files (*.mov);All files (*.*)")
+            try:  # Проверяем расширение файла
+                check_ext(path)
+                self.playlist.addMedia(QMediaContent
+                                       (QUrl.fromLocalFile(path)
+                                        )
+                                       )
+
+                # f = os.path.basename(path)
+                # print(f[0:f.rfind('.')]) Имя песни без расширения
+                # f = os.path.basename(i)
+                # print(f[0:]) Имя песни с расширением
+
+            except ValueError:
+                self.log = Log()  # Если расширение не соотвествует стандарту нашей программы
+                self.log.show()  # Выводим окно с поясняющим текстом
+
+            self.model.layoutChanged.emit()
+
 
 """"Создаем класс для диалогового окна, для неверного расширение файла"""
 

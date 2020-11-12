@@ -1,8 +1,9 @@
 import sys
-
+import sqlite3
 from PIL import Image
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+import os
 
 from Models.Design_PhotoProcessing import Ui_PhotoProcessingWindow
 
@@ -42,6 +43,21 @@ class PhotoProcessing_Window(QMainWindow, Ui_PhotoProcessingWindow):
     def openFile(self):
         try:
             self.filename = QFileDialog.getOpenFileName(self, 'Выберите картинку', '')[0]
+            # Импорт библиотеки
+
+            # Подключение к БД
+            self.con = sqlite3.connect("Presenters/photo.db")
+
+            # Создание курсора
+            self.cur = self.con.cursor()
+            self.path = os.path.basename(self.filename)
+            self.name = self.filename[0:self.filename.rfind('.')]
+            self.full_name = self.filename[0:]
+            self.result = self.cur.execute(
+                f"INSERT INTO photo (name, full_name, path) VALUES ('{self.name}', '{self.full_name}', '{self.path}')").fetchall()
+            self.con.commit()
+            self.con.close()
+
         except BaseException:
             print("Выберите изображение!")
         self.mainimg = Image.open(self.filename)
@@ -133,7 +149,8 @@ class PhotoProcessing_Window(QMainWindow, Ui_PhotoProcessingWindow):
 
     def blwh(self):
         try:
-            brightness, ok = QInputDialog.getInt(self, "Input Brightness", 'What brightness do you want to use?', 2, 1, 15,
+            brightness, ok = QInputDialog.getInt(self, "Input Brightness", 'What brightness do you want to use?', 2, 1,
+                                                 15,
                                                  1)
             if ok:
                 separator = 255 / brightness / 2 * 3

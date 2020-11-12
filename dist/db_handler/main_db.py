@@ -2,6 +2,8 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from db_handler.check_db import *
 from db_handler.Design_DB import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 
 
 # Импортировали все необходимое
@@ -58,6 +60,9 @@ class Interface(QtWidgets.QWidget):
             self.check_db.thr_register(name, passw)
         except Exception:
             print("Что-то пошло не так!")
+
+
+
 
 
 if __name__ == "__main__":
