@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="Time to stop this night, you can't do anything else now...">
+    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="is it... all?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design_PhotoProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Design_PhotoProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoEditor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/butcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/butcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freeFile.png" beforeDir="false" afterPath="$PROJECT_DIR$/freeFile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supadesign.ui" beforeDir="false" afterPath="$PROJECT_DIR$/supadesign.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supadesign.ui" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605146116014</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="is it... all?">
+      <created>1605186458674</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605186458674</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,7 +301,8 @@
     <MESSAGE value="added some functions" />
     <MESSAGE value="Filters done" />
     <MESSAGE value="Time to stop this night, you can't do anything else now..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Time to stop this night, you can't do anything else now..." />
+    <MESSAGE value="is it... all?" />
+    <option name="LAST_COMMIT_MESSAGE" value="is it... all?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604861020206">
@@ -352,10 +357,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1604861057156" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605146132027">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605186466064">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605146132027" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605186466064" />
     <state x="92" y="92" width="1496" height="826" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605147000135">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
