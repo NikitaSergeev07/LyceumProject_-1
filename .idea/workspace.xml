@@ -19,32 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="Filters done">
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (10).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (11).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (5).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (6).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (7).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (8).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/Mask (9).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask 2.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask 3.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask 6.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask 7.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask1.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask10.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask11.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask4.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask5.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask8.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Masks/resmask9.qrc" afterDir="false" />
+    <list default="true" id="23dde7d5-7583-4643-ac6d-845e845777b4" name="Default Changelist" comment="Time to stop this night, you can't do anything else now...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Design_PhotoProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Design_PhotoProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoEditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/butcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/butcher.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/freeFile.png" beforeDir="false" afterPath="$PROJECT_DIR$/freeFile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supadesign.ui" beforeDir="false" afterPath="$PROJECT_DIR$/supadesign.ui" afterDir="false" />
     </list>
@@ -287,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605125546997</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Time to stop this night, you can't do anything else now...">
+      <created>1605146116014</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605146116014</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,7 +296,8 @@
     <MESSAGE value="it works2" />
     <MESSAGE value="added some functions" />
     <MESSAGE value="Filters done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filters done" />
+    <MESSAGE value="Time to stop this night, you can't do anything else now..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Time to stop this night, you can't do anything else now..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="294" y="160" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604861020206">
@@ -329,46 +316,50 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="656" y="403" key="Github.ShareDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1604255096888" />
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605145546914">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom" timestamp="1605186167572">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605145546914" />
-    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605145546913">
+    <state width="1659" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605186167572" />
+    <state width="1659" height="272" key="GridCell.Tab.0.center" timestamp="1605186167571">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605145546913" />
-    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605145546913">
+    <state width="1659" height="272" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605186167571" />
+    <state width="1659" height="272" key="GridCell.Tab.0.left" timestamp="1605186167571">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605145546913" />
-    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605145546913">
+    <state width="1659" height="272" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605186167571" />
+    <state width="1659" height="272" key="GridCell.Tab.0.right" timestamp="1605186167572">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605145546913" />
-    <state width="1659" height="336" key="GridCell.Tab.1.bottom" timestamp="1605015663298">
+    <state width="1659" height="272" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605186167572" />
+    <state width="1659" height="336" key="GridCell.Tab.1.bottom" timestamp="1605185013174">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605015663298" />
-    <state width="1659" height="336" key="GridCell.Tab.1.center" timestamp="1605015663297">
+    <state width="1659" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1605185013174" />
+    <state width="1659" height="336" key="GridCell.Tab.1.center" timestamp="1605185013174">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605015663297" />
-    <state width="1659" height="336" key="GridCell.Tab.1.left" timestamp="1605015663297">
+    <state width="1659" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1605185013174" />
+    <state width="1659" height="336" key="GridCell.Tab.1.left" timestamp="1605185013174">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605015663297" />
-    <state width="1659" height="336" key="GridCell.Tab.1.right" timestamp="1605015663297">
+    <state width="1659" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1605185013174" />
+    <state width="1659" height="336" key="GridCell.Tab.1.right" timestamp="1605185013174">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605015663297" />
+    <state width="1659" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1605185013174" />
     <state x="341" y="150" key="SettingsEditor" timestamp="1604861057156">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1604861057156" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605125626872">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605146132027">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605125626872" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1605146132027" />
+    <state x="92" y="92" width="1496" height="826" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605147000135">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="92" y="92" width="1496" height="826" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1605147000135" />
     <state x="657" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604779165258">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
