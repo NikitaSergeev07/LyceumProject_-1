@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/myprefix">
+        <file alias="Mask (2).png">C:\Users\q123d\PyCharm\Future Program(name to Change)\Masks</file>
+    </qresource>
+</RCC>

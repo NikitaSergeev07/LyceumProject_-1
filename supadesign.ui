@@ -517,6 +517,9 @@
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
     </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
@@ -561,28 +564,22 @@
     <addaction name="menuJust_Blue"/>
     <addaction name="actionCurvies"/>
     <addaction name="actionGray_Skale"/>
-    <addaction name="actionContrast"/>
+    <addaction name="acontrast"/>
    </widget>
    <widget class="QMenu" name="menuCropper">
     <property name="title">
      <string>Cropper</string>
     </property>
-    <widget class="QMenu" name="menuShape">
-     <property name="title">
-      <string>Shape</string>
-     </property>
-     <addaction name="actionSquare_2"/>
-     <addaction name="actionTriangle_2"/>
-     <addaction name="actionCircle"/>
-    </widget>
     <widget class="QMenu" name="menuAspect_Ratio">
      <property name="title">
       <string>Aspect Ratio</string>
      </property>
-     <addaction name="action3_4"/>
-     <addaction name="action4_4"/>
-     <addaction name="action16_10"/>
-     <addaction name="action3_2"/>
+     <addaction name="a11"/>
+     <addaction name="a23"/>
+     <addaction name="a32"/>
+     <addaction name="a34"/>
+     <addaction name="a44"/>
+     <addaction name="a1610"/>
     </widget>
     <widget class="QMenu" name="menuFor_Social_Network">
      <property name="title">
@@ -591,7 +588,6 @@
      <addaction name="actionInstagram_Stories_2"/>
      <addaction name="actionTwitter_Youtube_Header"/>
     </widget>
-    <addaction name="menuShape"/>
     <addaction name="menuAspect_Ratio"/>
     <addaction name="menuFor_Social_Network"/>
     <addaction name="separator"/>
@@ -616,7 +612,6 @@
     <property name="title">
      <string>Masks</string>
     </property>
-    <addaction name="action_5"/>
    </widget>
    <widget class="QMenu" name="menuAdd">
     <property name="title">
@@ -701,17 +696,17 @@
     <string>Circle</string>
    </property>
   </action>
-  <action name="action4_4">
+  <action name="a44">
    <property name="text">
     <string>4:3</string>
    </property>
   </action>
-  <action name="action16_10">
+  <action name="a1610">
    <property name="text">
     <string>16:9</string>
    </property>
   </action>
-  <action name="action3_4">
+  <action name="a34">
    <property name="text">
     <string>3:4</string>
    </property>
@@ -721,7 +716,7 @@
     <string>9:16</string>
    </property>
   </action>
-  <action name="action3_2">
+  <action name="a32">
    <property name="text">
     <string>3:2</string>
    </property>
@@ -836,14 +831,34 @@
     <string>Gray Skale</string>
    </property>
   </action>
-  <action name="actionContrast">
+  <action name="acontrast">
    <property name="text">
     <string>Contrast</string>
    </property>
   </action>
+  <action name="a11">
+   <property name="text">
+    <string>1:1</string>
+   </property>
+  </action>
+  <action name="a23">
+   <property name="text">
+    <string>2:3</string>
+   </property>
+  </action>
  </widget>
  <resources>
-  <include location="resource.qrc"/>
+  <include location="Masks/resmask1.qrc"/>
+  <include location="Masks/resmask 2.qrc"/>
+  <include location="Masks/resmask 3.qrc"/>
+  <include location="Masks/resmask4.qrc"/>
+  <include location="Masks/resmask5.qrc"/>
+  <include location="Masks/resmask 6.qrc"/>
+  <include location="Masks/resmask 7.qrc"/>
+  <include location="Masks/resmask8.qrc"/>
+  <include location="Masks/resmask9.qrc"/>
+  <include location="Masks/resmask10.qrc"/>
+  <include location="Masks/resmask11.qrc"/>
  </resources>
  <connections/>
 </ui>
